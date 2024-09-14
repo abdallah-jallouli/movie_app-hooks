@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Baloo+Tamma+2:wght@500&family=Roboto+Mono:wght@300&display=swap");
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: #fff;
+}
+
+body {
+  background-color: black;
+}
+
+.App {
+  font-family: "Alata", sans-serif;
+  text-align: center;
+}
+
+.header-container {
+  color: white;
+  background: darkred;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem;
+  box-shadow: 5px 2px 16px 3px rgb(0 0 0 / 12%);
+}
+
+.search-container {
+  display: flex;
+  /* width:80%; */
+  align-items: center;
+  justify-content: center;
+}
+.inp {
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/*Movie Card*/
+
+.movie-card {
+  border-radius: 6px;
+  background: #163020;
+  position: relative;
+  margin: 1rem;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0px 8px 20px 0px rgb(0 0 0 / 5%);
+  transition: 0.7s ease;
+}
+.movie-card:hover {
+  cursor: pointer;
+  /* transform: scale(1.1) ; */
+}
+
+.movie-card:hover img{
+  opacity: 0.8;
+}
+
+.movie-card > img {
+  width: 100%;
+  height: 220px;
+}
+
+.movie-card > h4,
+.movie-card > p {
+  color: black;
+  padding: 10px;
+  /* overflow: auto; */
+  white-space: nowrap;
+}
+
+/*Form styling*/
+
+form {
+  border-radius: 6px;
+  background-color: #304D30;
+  font-size: 20px;
+  width: calc(100vw / 1.8);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+form > input {
+  padding: 0.7em;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form > label {
+  margin-top: 15px;
+}
+
+/* general button styling */
+
+.btn {
+  outline: 0;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  /* background: #88AB8E; */
+  background-color: #88AB8E;
+  
+  height: 30px;
+  min-width: 80px;
+
+  border: 0.3px solid rgba(0, 0, 0, 0.37);
+
+}
+
+.add{
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.btn-danger {
+  color: white;
+  background: #304D30;
+}
+
+.btn-primary {
+  color: black;
+  background: #304D30;
+}
+
+.add-movie-btn {
+  background: white;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+}
+
+.filter{
+  text-align: center;
+  background-color: #ccc;
+}
+.filter input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+.deliEdit{
+  background-color: #304D30;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*Annimations */
+
+.fade-out {
+  animation: fadeOut ease 2s;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive  */
+
+@media (min-width: 750px) {
+  form {
+    width: calc(100vw / 3);
+  }
+}
